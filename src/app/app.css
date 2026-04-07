@@ -1,0 +1,58 @@
+:host {
+  display: block;
+}
+
+.counter-card {
+  animation: rise-in 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.counter-ring {
+  animation: floaty 4.2s ease-in-out infinite;
+}
+
+.value-pop {
+  animation: glow-pulse 2.2s ease-in-out infinite;
+}
+
+.btn-action {
+  transform: translateY(0);
+}
+
+.btn-action:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.btn-action:active {
+  transform: translateY(0) scale(0.98);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    text-shadow: 0 0 0 rgba(15, 23, 42, 0.18);
+  }
+  50% {
+    text-shadow: 0 10px 24px rgba(15, 23, 42, 0.24);
+  }
+}
